@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+    
+</head>
+<body>
+    
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" class="input" placeholder="Username" required>
+            <label for="password">Password:</label>
+            <input type="password" class="Password" placeholder="password" required>
+
+            <button type="button" onclick="login()">Login</button>
+
+            <div class="options">
+                <a href="#" onclick="showSetup()">Setup</a> <br> 
+                <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+            </div>
+        </form>
+
+        <form id="setupForm" style="display: none;">
+
+                <h2>Account Setup</h2>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+            
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            
+                <button type="button" onclick="completeSetup()">Complete Setup</button>
+            
+            
+        </form>
+
+        <form id="forgotPasswordForm" style="display: none;">
+            <h2>Forgot Password</h2>
+            <p>Enter your email address below to reset your password:</p>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <button type="button" onclick="sendPasswordResetEmail()">Reset Password</button>
+        
+            <div class="options">
+                <a href="#" onclick="showLogin()">Back to Login</a>
+            </div>
+        </form>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
